@@ -1,77 +1,57 @@
-## Fitur
-
-- **Service Create**: Membuat akun VPN baru
-- **Service Renew**: Memperbarui akun VPN yang sudah ada
-- **Top Up Saldo**: Menambah saldo akun pengguna via QRIS
-- **Cek Saldo**: Memeriksa saldo akun pengguna
-- **QRIS Payment**: Sistem pembayaran menggunakan QRIS (Quick Response Code Indonesian Standard)
-
-## Teknologi yang Digunakan
-
-- Node.js
-- SQLite3
-- Axios
-- Telegraf (untuk integrasi dengan Telegram Bot)
-- QRIS Payment Gateway
-
+## SCRIPT AUTO ORDER BOT TELE BY API POTATO
 ## Installasi Otomatis
 ```bash
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update -y && apt install -y git && apt install -y curl && curl -L -k -sS https://raw.githubusercontent.com/arivpnstores/BotVPN2/refs/heads/main/start -o start && bash start sellvpn && [ $? -eq 0 ] && rm -f start
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update -y && apt install -y git && apt install -y curl && curl -L -k -sS https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/start -o start && bash start sellvpn && [ $? -eq 0 ] && rm -f start
+```
+## UPDATE
+```bash
+curl --connect-timeout 1 --max-time 3 -sL https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/update.sh -o update.sh && chmod +x update.sh && bash update.sh
+```
+<img src="./ss.png" alt="image" width="500"/>
+
+
+## DUAL METHODE AUTO PAYMET
+
+**1. GopayMerchat (Unofficial)**
+- CEK PEMBAYARAN GOPAY
+- Pembelian key: https://t.me/AutoGopayBot
+- Web panel: https://gopay.sawargipay.cloud
+- Harga Rp1.000 / Hari (bisa tanpa fee di qris)
+```bash
+AMBIL GOPAY_KEY
 ```
 
-## install Manual
+**2. Orderkuota (Unofficial)**
 
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/arivpnstores/BotVPN2.git
-   ```
-2. Masuk ke direktori proyek:
-   ```bash
-   cd BotVPN2
-   ```
-3. Install dependencies:
-   ```bash
-   npm i sqlite3 express telegraf axios
-   ```
-4. Siapkan konfigurasi di `.vars.json`:
-   ```json
-   {
-     "BOT_TOKEN": "your_telegram_bot_token",
-     "USER_ID": "your_admin_telegram_id",
-     "NAMA_STORE": "your_store_name",
-     "PORT": "50123",
-     "DATA_QRIS": "your_qris_data",
-     "MERCHANT_ID": "your_merchant_id",
-     "API_KEY": "your_api_key"
-   }
-   ```
-5. Jalankan bot:
-   ```bash
-   node app.js
-   ```
-6. Service BOT:
-   ```bash
-   npm i -g pm2
-   pm2 start app.js --name sellvpn
-   pm2 startup
-   pm2 save
-   ```
-## Uninstall Bot
-- Paste Perintah ini di vps
+- DATA QRIS ORDER KUOTA AMBIL DI SINI
+https://scanqr.org/
+
+**Login Step 1**
+```bash
+curl -X POST "https://orkut.rajaserver.web.id/api/orkut/login" -d "username=08123456789&password=password123"
 ```
-wget -O hapus.sh https://raw.githubusercontent.com/arivpnstores/BotVPN2/ipuk/hapus.sh && chmod +x hapus.sh && ./hapus.sh
+
+**Login Step 2**
+```bash
+curl -X POST "https://orkut.rajaserver.web.id/api/orkut/verify-otp" -d "username=08123456789&otp=123456"
 ```
-## Konfigurasi QRIS
 
-Untuk menggunakan sistem pembayaran QRIS, Anda perlu menyiapkan:
-1. DATA QRIS: Data Qris bisa diambil dari web https://scanqr.org/, Dengan mengupload Qris anda dan menyalin hasil scan datanya
-2. MERCHANT ID: ID merchant yang terdaftar di okeconnect
-3. API KEY: Api key yang terdaftar di okeconnect
+**Cek Mutasi**
+```bash
+curl -X POST "https://orkut.rajaserver.web.id/api/orkut/qris-history" -d "username=08123456789&token=merchant_id:token_string&jenis=masuk"
+```
 
-## Struktur Proyek
+**Tarik Saldo**
+```bash
+curl -X POST "https://orkut.rajaserver.web.id/api/orkut/qris-withdraw" -d "username=08123456789&token=merchant_id:token_string&amount=100000"
+```
 
-- `app.js`: File utama yang mengatur bot dan server
-- `modules/create.js`: Modul untuk membuat akun VPN baru
-- `modules/renew.js`: Modul untuk memperbarui akun VPN yang sudah ada
-- `sellvpn.db`: Database SQLite yang menyimpan data pengguna dan server
-- `.vars.json`: File konfigurasi untuk menyimpan pengaturan bot dan QRIS
+---
+
+## TAMPILAN SC BotVPN2 POTATO 
+<img src="./ss2.png" alt="image" width="300"/>
+
+Owner : https://t.me/ARI_VPN_STORE
+
+DONASI SCAN QIRS : 
+<img src="https://rajaserver.web.id/qris.jpg" alt="image" width="300"/>

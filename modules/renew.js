@@ -20,7 +20,7 @@ async function renewssh(username, exp, limitip, serverId) {
 
       const domain = server.domain;
       const auth = server.auth;
-      const param = `:5888/renewssh?user=${username}&exp=${exp}&iplimit=${limitip}&auth=${auth}`;
+      const param = `:5889/renewssh?user=${username}&exp=${exp}&iplimit=${limitip}&auth=${auth}`;
       const url = `http://${domain}${param}`;
       axios.get(url)
         .then(response => {
@@ -71,7 +71,7 @@ async function renewvmess(username, exp, quota, limitip, serverId) {
   
         const domain = server.domain;
         const auth = server.auth;
-        const param = `:5888/renewvmess?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
+        const param = `:5889/renewvmess?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
         const url = `http://${domain}${param}`;
         axios.get(url)
           .then(response => {
@@ -122,7 +122,7 @@ async function renewvmess(username, exp, quota, limitip, serverId) {
   
         const domain = server.domain;
         const auth = server.auth;
-        const param = `:5888/renewvless?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
+        const param = `:5889/renewvless?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
         const url = `http://${domain}${param}`;
         axios.get(url)
           .then(response => {
@@ -174,7 +174,7 @@ async function renewvmess(username, exp, quota, limitip, serverId) {
   
         const domain = server.domain;
         const auth = server.auth;
-        const param = `:5888/renewtrojan?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
+        const param = `:5889/renewtrojan?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
         const url = `http://${domain}${param}`;
         axios.get(url)
           .then(response => {
@@ -226,7 +226,7 @@ async function renewvmess(username, exp, quota, limitip, serverId) {
   
         const domain = server.domain;
         const auth = server.auth;
-        const param = `:5888/renewshadowsocks?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
+        const param = `:5889/renewshadowsocks?user=${username}&exp=${exp}&quota=${quota}&iplimit=${limitip}&auth=${auth}`;
         const url = `http://${domain}${param}`;
         axios.get(url)
           .then(response => {
