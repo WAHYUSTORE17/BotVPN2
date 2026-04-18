@@ -37,51 +37,12 @@ const {
 } = require('./modules/create');
 
 const { 
-  trialssh, 
-  trialvmess, 
-  trialvless, 
-  trialtrojan, 
-  trialshadowsocks 
-} = require('./modules/trial');
-
-const { 
   renewssh, 
   renewvmess, 
   renewvless, 
   renewtrojan, 
   renewshadowsocks 
 } = require('./modules/renew');
-
-const { 
-  delssh, 
-  delvmess, 
-  delvless, 
-  deltrojan, 
-  delshadowsocks 
-} = require('./modules/del');
-
-const { 
-  lockssh, 
-  lockvmess, 
-  lockvless, 
-  locktrojan, 
-  lockshadowsocks 
-} = require('./modules/lock');
-
-const { 
-  unlockssh, 
-  unlockvmess, 
-  unlockvless, 
-  unlocktrojan, 
-  unlockshadowsocks 
-} = require('./modules/unlock');
-
-const { 
-  changelimipsshvpn, 
-  changelimipvmess, 
-  changelimipvless, 
-  changelimiptrojan
-} = require('./modules/change-ip');
 
 const fsPromises = require('fs/promises');
 const path = require('path');
@@ -418,7 +379,7 @@ Status: <code>${statusReseller}</code>
 • 🛡️ Admin Panel  : /helpadmin
 
 👨‍💻 <b>Pembuat:</b> @ARI_VPN_STORE
-🛠️ <b>Credit:</b> ARI STORE × API POTATO
+🛠️ <b>Credit:</b> ARI STORE × API ARI
 🔧 <b>Base:</b> FighterTunnel
 👥 <b>Pengguna BOT:</b> ${jumlahPengguna}
 ⏱️ <b>Latency:</b> ${latency} ms
@@ -431,19 +392,6 @@ let keyboard;
       { text: '♻️ Perpanjang Akun', callback_data: 'service_renew' }
     ],
     [
-      { text: '❌ Hapus Akun', callback_data: 'service_del' },
-      { text: '📶 Cek Server', callback_data: 'cek_service' }
-    ],
-    [
-      { text: '🔀 Change Limit IP', callback_data: 'service_changelimip' },
-      { text: '🔧 Fix Akun Erorr', callback_data: 'service_fix' }
-    ],
-    [
-      { text: '🗝️ Kunci Akun', callback_data: 'service_lock' },
-      { text: '🔐 Buka Kunci Akun', callback_data: 'service_unlock' }
-    ],
-    [
-      { text: '⌛ Trial Akun', callback_data: 'service_trial' },
       { text: '💰 TopUp Saldo', callback_data: 'topup_saldo' }
     ],
     [
