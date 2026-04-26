@@ -12,7 +12,7 @@ sudo apt autoremove -y
     fi
 
     if [ ! -f /root/BotVPN2/app.js ]; then
-        git clone https://github.com/arivpnstores/BotVPN2.git /root/BotVPN2
+        git clone https://github.com/WAHYUSTORE17/BotVPN2.git /root/BotVPN2
     fi
 apt install jq -y
 apt install npm pm2 -y
@@ -26,25 +26,25 @@ npm install -g pm2
     if [ -n "$(ls -A /root/BotVPN2)" ]; then
         chmod +x /root/BotVPN2/*
     fi
- wget --connect-timeout=1 --timeout=30 -O .gitattributes "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/.gitattributes"
- wget --connect-timeout=1 --timeout=30 -O README.md "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/README.md"
- wget --connect-timeout=1 --timeout=30 -O app.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/app.js"
- wget --connect-timeout=1 --timeout=30 -O wd.py "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/wd.py"
- wget --connect-timeout=1 --timeout=30 -O cek-port.sh "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/cek-port.sh"
- wget --connect-timeout=1 --timeout=30 -O ecosystem.config.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/ecosystem.config.js"
- wget --connect-timeout=1 --timeout=30 -O package.json "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/package.json"
- wget --connect-timeout=1 --timeout=30 -O ss.png "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/ss.png"
- wget --connect-timeout=1 --timeout=30 -O ss2.png "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/ss2.png"
- wget --connect-timeout=1 --timeout=30 -O start "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/start"
- wget --connect-timeout=1 --timeout=30 -O update.sh "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/update.sh"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/reseller.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/reseller.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/change-ip.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/change-ip.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/create.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/create.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/del.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/del.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/lock.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/lock.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/unlock.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/unlock.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/renew.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/renew.js"
- wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/trial.js "https://raw.githubusercontent.com/arivpnstores/BotVPN2/main/modules/trial.js"
+ wget --connect-timeout=1 --timeout=30 -O .gitattributes "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/.gitattributes"
+ wget --connect-timeout=1 --timeout=30 -O README.md "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/README.md"
+ wget --connect-timeout=1 --timeout=30 -O app.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/app.js"
+ wget --connect-timeout=1 --timeout=30 -O wd.py "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/wd.py"
+ wget --connect-timeout=1 --timeout=30 -O cek-port.sh "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/cek-port.sh"
+ wget --connect-timeout=1 --timeout=30 -O ecosystem.config.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/ecosystem.config.js"
+ wget --connect-timeout=1 --timeout=30 -O package.json "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/package.json"
+ wget --connect-timeout=1 --timeout=30 -O ss.png "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/ss.png"
+ wget --connect-timeout=1 --timeout=30 -O ss2.png "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/ss2.png"
+ wget --connect-timeout=1 --timeout=30 -O start "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/start"
+ wget --connect-timeout=1 --timeout=30 -O update.sh "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/update.sh"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/reseller.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/reseller.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/change-ip.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/change-ip.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/create.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/create.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/del.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/del.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/lock.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/lock.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/unlock.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/unlock.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/renew.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/renew.js"
+ wget --connect-timeout=1 --timeout=30 -O /root/BotVPN2/modules/trial.js "https://raw.githubusercontent.com/WAHYUSTORE17/BotVPN2/main/modules/trial.js"
 
 # stop dulu servicenya
 systemctl stop sellvpn.service
